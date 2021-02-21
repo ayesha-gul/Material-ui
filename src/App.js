@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Button,makeStyles,Icon} from '@material-ui/core'
+
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
+
 
 function App() {
+const classes = useStyles()
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>MaTeriAL ui..</h1>
+      <h1>sub maya hai.. </h1>
+      <Button variant='contained' color="primary">HeLlO BisMillH..</Button>
+
+  <div>
+      <Button   variant="contained"
+        color="default"
+        className={classes.button}
+        endIcon={<Icon>start</Icon>}>
+          hey maya
+      
+        </Button>
+        </div>
+      
     </div>
   );
 }
